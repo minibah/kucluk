@@ -2,7 +2,7 @@ import sys
 from ascii_magic import AsciiArt
 from colorama import Fore, Style, init
 
-# Inisialisasi colorama
+# Inisialisasi colorama untuk warna di terminal
 init(autoreset=True)
 
 def load_banner(image_source: str, from_url: bool = True):
@@ -29,6 +29,5 @@ def show_info(number: str, credit: int, premium_credit: int, sim_type: str):
     print(Fore.BLUE + f"Premium    : {premium_credit}")
     print(Fore.YELLOW + "=" * 60 + Style.RESET_ALL)
 
-if __name__ == "__main__":
-    load_banner("https://i.imgur.com/8Km9tLL.png", from_url=True)
-    show_info("6287873385484", credit=332, premium_credit=0, sim_type="PREPAID")
+# ✅ Alias agar kode lama tetap berfungsi
+load = load_banner
